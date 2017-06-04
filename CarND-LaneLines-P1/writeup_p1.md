@@ -39,22 +39,27 @@ For drawing smooth lines, here is how I modified the `draw_lines()`:
 6. Use `(min_right_x, min_right_y), (max_right_x, max_right_y)` to draw another line.
 
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+This is how the images look like after the pipeline:
 
-![alt text]['test_images/solidWhiteCurve_detected.jpg']
+![alt text](https://github.com/dxl0632/self-driving-car/blob/master/CarND-LaneLines-P1/test_images_output/solidWhiteCurve.jpg)
+
+![alt text](https://github.com/dxl0632/self-driving-car/blob/master/CarND-LaneLines-P1/test_images_output/solidWhiteRight.jpg)
+
+![alt text](https://github.com/dxl0632/self-driving-car/blob/master/CarND-LaneLines-P1/test_images_output/solidYellowCurve.jpg)
 
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+One shortcoming is now the parameters (thresholds, vertices, etc.) for the pipeline is configured manually. I wonder if this can be detected automatically.
 
-Another shortcoming could be ...
-
+Another shortcoming is the `draw_lines` function is sensitive to outliers, and it only works well for relatively straight lines. So if I apply this to the last challenge, the detection is miserable, possibly due to the curves.
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be improving the `draw_lines` to be able to handle curves.
 
-Another potential improvement could be to ...
+Another possible improvement would be automatically tune the parameters for the pipeline.
+
+ 
